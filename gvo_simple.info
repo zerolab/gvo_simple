@@ -1,0 +1,16 @@
+name = GVO Simple
+description = Global Voices Timemap Project theme 
+version = VERSION
+core = 6.x
+engine = phptemplate
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+
+regions[header]   = Header
+regions[nav]      = Navigation
+regions[featured] = Featured
+regions[content]  = Content
+regions[side]     = Sidebar
+regions[footer]   = Footer

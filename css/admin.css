@@ -1,0 +1,128 @@
+/**
+ * Admin
+ */
+
+.page-admin #content {
+  float:none;
+  width:100%;  
+}
+
+.block-region {
+  border:2px dashed #1f1f1f;  
+  margin:5px 0;
+  padding:5px;  
+}
+
+.page-admin thead,
+table.sticky-header,
+#blocks tableHeader-processed {
+  background-color:#1f1f1f;
+  color:#fff;
+}
+
+#blocks .region {
+  background-color:#eee;
+  border-bottom:1px solid #666;
+}
+
+.page-admin th {
+  background:#1f1f1f;
+  border:1px solid #666;
+  border-width:0 1px;  
+}
+
+.page-admin .system-status-report th {
+  color:#fff;
+  padding:5px 10px 5px 0;
+  text-align:right;
+}
+
+.page-admin tr {
+  border-bottom: 1px solid #ccc;  
+}
+
+.page-admin tr.region-populated {
+  display:none;
+}
+
+.page-admin tr.region-empty {
+  color:#999;  
+}
+
+.page-admin td {
+  padding:5px;  
+}
+
+.page-admin tr.odd {
+  background:#f4f4f4;
+}
+
+.page-admin td a {
+  color: #fa5e00;
+}
+
+a.tabledrag-handle {
+  background:url(../images/draggable.png) no-repeat;
+  float:left;
+  height:20px;
+  margin:0 10px 0 0;
+  width:16px;
+}
+
+a.tabledrag-handle:hover {
+  background-position:0 -20px;
+}
+
+.page-admin td .form-item {
+  line-height:20px;
+  margin:0;
+}
+
+.content-overview-links {
+  font-weight:700;
+}
+
+/**
+ *   Views admin links
+ */
+.views-hide {
+  background:#ccc;
+  font:11px/1.5 Arial, "Helvetica Neue", Helvetica, FreeSans, sans-serif;
+  display:none;
+  padding:4px;
+  z-index:10;
+  border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;  
+}
+
+div.views-hide a {
+  color:#000;
+  border:1px solid #ccc;
+  padding:4px 10px;
+}
+
+div.views-hide a:hover {
+  background:#fff;
+  border-color:#aaa;
+}
+
+.view:hover,
+.view:hover .attachment {
+  position:relative;
+}
+
+.view:hover .views-hide {
+  display:inline-block;
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+.views-hide ul.links {
+  display:block;
+  margin:0;
+  overflow:hidden;
+}
+
+.views-hide li {
+  float:left;
+}
