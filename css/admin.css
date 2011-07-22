@@ -17,6 +17,45 @@
   width:818px;
 }
 
+.node-form fieldset.location .form-item {
+  float:left;
+  overflow:hidden;
+  width:410px;
+}
+
+.node-form fieldset.location .form-item input {
+  width:398px;
+}
+
+.node-form fieldset fieldset {
+  margin:17px 0;
+  width:380px;
+}
+
+.node-form fieldset.location fieldset .form-item {
+	line-height:18px;
+	margin:0;
+  width:390px;
+}
+
+.node-form fieldset.location #gmap-auto1map-gmap0,
+.node-form fieldset.location #gmap-auto1map-locpick_latitude0-wrapper,
+.node-form fieldset.location #gmap-auto1map-locpick_longitude0-wrapper,
+.node-form fieldset.location-current-coordinates-fieldset {
+  clear:none;
+  float:none;
+  margin-left:420px;
+}
+
+.node-form .description {
+  color:#777;
+  font-size:12px;
+}
+
+.node-form .location .description {
+  margin:0 0 18px;
+}
+
 .node-form .vertical-tabs .form-text,
 .node-form .vertical-tabs .resizable-textarea {
   width:578px;
