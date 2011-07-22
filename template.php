@@ -35,7 +35,7 @@ function gvo_simple_theme() {
  */
 function gvo_simple_preprocess_page(&$vars) {
   $attr = array();
-    
+      
   if (isset($vars['node'])) {
     $vars['template_files'][] = 'page-'. $vars['node']->type;
   }
@@ -47,6 +47,9 @@ function gvo_simple_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     $vars['template_files'][] = 'page-front';
     $vars['id'] = 'front';
+  }
+  else if (arg(0) == 'node' && (arg(1) == 'add' || arg(2) == 'edit')) {
+  	$vars['side'] = '';
   }
   
   $attr['class'] = gvo_simple_body_classes_by_path($vars);  

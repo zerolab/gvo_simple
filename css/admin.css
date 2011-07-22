@@ -7,6 +7,35 @@
   width:100%;  
 }
 
+.node-form {
+  background:#f8f8f8;
+  padding:52px 60px;
+}
+
+.node-form .form-text,
+.node-form .resizable-textarea {
+  width:818px;
+}
+
+.node-form .vertical-tabs .form-text,
+.node-form .vertical-tabs .resizable-textarea {
+  width:578px;
+}
+
+.node-form div.vertical-tabs {
+  margin-left:170px;
+}
+
+.node-form .vertical-tabs ul.vertical-tabs-list {
+  left:-170px;
+  width:170px;
+}
+
+.node-form div.vertical-tabs .vertical-tabs-panes fieldset.vertical-tabs-pane {
+  margin-left:-1px!important;
+  padding:0 10px;
+}
+
 .block-region {
   border:2px dashed #1f1f1f;  
   margin:5px 0;

@@ -1,6 +1,6 @@
 body {
   color:#444;
-  font:13px/20px "Helvetica Neue", Arial, sans-serif;
+  font:13px/18px "Helvetica Neue", Arial, sans-serif;
 }
 
 #header,
@@ -27,11 +27,13 @@ body {
 .sidebar #content {
   float:left;
   margin-right:70px;
-  width:650px;
+  width:530px;
 }
 
 #side {
   float:left;
+  margin:0 0 0 -10px;
+  width:360px;
 }
 
 #footer {
@@ -39,6 +41,10 @@ body {
   color:#fff;
   margin:0 auto;
   padding:10px 0;
+}
+
+#side .block {
+  margin:0 0 18px 10px;
 }
 
 /**
@@ -164,8 +170,8 @@ legend {
 }
 
 .form-item {
-  line-height:40px;
-  margin:0 0 20px;
+  line-height:36px;
+  margin:0 0 18px;
 }
 
 .form-item label {
@@ -176,6 +182,10 @@ legend {
 
 .form-item .description {
   line-height:20px;
+}
+
+html.js input.form-autocomplete {
+  background-position:99% 7px;
 }
 
 .container-inline .form-item {
