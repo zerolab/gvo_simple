@@ -28,7 +28,8 @@ table.sticky-header,
 .page-admin th {
   background:#1f1f1f;
   border:1px solid #666;
-  border-width:0 1px;  
+  border-width:0 1px;
+  padding:5px;
 }
 
 .page-admin .system-status-report th {
@@ -75,16 +76,8 @@ a.tabledrag-handle:hover {
 }
 
 /**
- * (Hash) grid
+ * Grid
  */
- 
-body.grid #header,
-body.grid #featured,
-body.grid #page,
-body.grid #footer {
-  background:url(../images/grid.png) 0 0;
-}
-
 #grid {
 	margin-left:-480px;
 	left:50%;
@@ -94,8 +87,19 @@ body.grid #footer {
 }
 
 #grid div.vert {
-	border:solid #1f1f1f;
+	border:solid red;
 	border-width:0 1px;
-	margin-right:9px;
+	margin-left:9px;
   width:49px;
+}
+
+#grid div.vert.first-line {
+  margin-left:5px;
+}
+
+#grid div.horiz {
+  border-bottom:1px solid #eee;
+  height:17px;  
+  margin:0;
+  padding:0;
 }

@@ -63,5 +63,9 @@
   
 <?php print $scripts ?>
 <?php print $closure ?>
+
+<?php if ($is_admin) : ?>
+	<script src="<?php print base_path() . path_to_theme()?>/js/hashgrid.js"></script>
+<?php endif; ?>
 </body>
 </html>
