@@ -75,8 +75,16 @@ a.tabledrag-handle:hover {
 }
 
 /**
- * Hashgrid
+ * (Hash) grid
  */
+ 
+body.grid #header,
+body.grid #featured,
+body.grid #page,
+body.grid #footer {
+  background:url(../images/grid.png) 0 0;
+}
+
 #grid {
 	margin-left:-480px;
 	left:50%;
