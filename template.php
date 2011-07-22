@@ -60,7 +60,7 @@ function gvo_simple_preprocess_page(&$vars) {
       $vars['template_files'][] = 'print-page-'. $vars['node']->type;
     }
 
-    $css = gvo_simple_css_stripped();
+    $css = drupal_add_css();
 
     unset($css['all']);
     unset($css['screen']);
@@ -75,31 +75,6 @@ function gvo_simple_preprocess_page(&$vars) {
       // add admin styles only for logged in users
       drupal_add_css(path_to_theme() .'/css/admin.css', 'theme', 'screen');
     }
-
-    $remove = array(
-      'modules/*',
-      'sites/all/modules/*',
-    );
-    $exceptions = array(
-      //'modules/system/system.css',
-      'modules/update/update.css',
-      'modules/custom/*',
-      'sites/all/modules/contrib/admin/*',
-      'sites/all/modules/contrib/admin_menu/*',
-      'sites/all/modules/contrib/vertical_tabs/*',
-      'sites/all/modules/contrib/devel/*',
-    );
-    
-    if (user_access('administer site configuration')) {
-      $exceptions[] = 'sites/all/modules/contrib/ctools/*';
-      $exceptions[] = 'sites/all/modules/contrib/context/*';
-    }
-    
-    if (user_access('create item content')) {
-      $exceptions[] = 'sites/all/modules/contrib/date/*';
-    }
-    
-    $vars['styles'] = drupal_get_css(gvo_simple_css_stripped($remove, $exceptions));
   }
   
   // Strip duplicate head charset metatag
@@ -233,32 +208,4 @@ function gvo_simple_body_classes_by_path(&$vars) {
   $classes = explode(' ', $vars['body_classes']);
   
   return implode(' ', array_unique($classes));  
-}
-
-/**
- * Strips CSS files from a Drupal CSS array whose filenames start with
- * prefixes provided in the $match argument.
- * Taken from http://drupal.org/project/tao
- */
-function gvo_simple_css_stripped($match = array('modules/*'), $exceptions = NULL) {
-  // Set default exceptions
-  if (!is_array($exceptions)) {
-    $exceptions = array(
-      'modules/system/system.css',
-      'modules/update/update.css',
-      'modules/openid/openid.css',
-      'modules/custom/*',
-    );
-  }
-  $css = drupal_add_css();
-  $match = implode("\n", $match);
-  $exceptions = implode("\n", $exceptions);
-  foreach (array_keys($css['all']['module']) as $filename) {
-    if (drupal_match_path($filename, $match) && !drupal_match_path($filename, $exceptions)) {
-      unset($css['all']['module'][$filename]);
-    }
-  }
-
-  ksort($css);
-  return $css;
 }
