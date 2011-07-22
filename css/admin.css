@@ -9,6 +9,7 @@
 
 .node-form {
   background:#f8f8f8;
+  margin:-19px 0 19px;
   padding:52px 60px;
 }
 
@@ -19,8 +20,15 @@
 
 .node-form fieldset.location .form-item {
   float:left;
+  margin:0;
   overflow:hidden;
   width:410px;
+}
+
+.node-form .container-inline-date {
+  clear:none;
+  float:left;
+  width:240px;
 }
 
 .node-form fieldset.location .form-item input {
@@ -141,6 +149,10 @@ a.tabledrag-handle:hover {
 
 .content-overview-links {
   font-weight:700;
+}
+
+body.admin-menu {
+  margin-top:36px!important;
 }
 
 /**
