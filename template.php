@@ -35,7 +35,7 @@ function gvo_simple_theme() {
  */
 function gvo_simple_preprocess_page(&$vars) {
   $attr = array();
-  
+    
   if (isset($vars['node'])) {
     $vars['template_files'][] = 'page-'. $vars['node']->type;
   }
@@ -65,9 +65,7 @@ function gvo_simple_preprocess_page(&$vars) {
     unset($css['all']);
     unset($css['screen']);
 
-    $css['all'] = $css['print'];
-
-    $vars['styles'] = drupal_get_css($css);
+    $css['all'] = $css['print'];    
   }
   else {
 
@@ -76,6 +74,8 @@ function gvo_simple_preprocess_page(&$vars) {
       drupal_add_css(path_to_theme() .'/css/admin.css', 'theme', 'screen');
     }
   }
+  
+  $vars['styles'] = drupal_get_css($css);
   
   // Strip duplicate head charset metatag
   $matches = array();
