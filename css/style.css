@@ -8,7 +8,7 @@ body {
 #featured,
 #page,
 #footer {
-  margin:0 auto 20px;
+  margin:0 auto 18px;
   overflow:hidden;
   width:950px;
 }
@@ -16,15 +16,12 @@ body {
 #header {
   background:#f4f4f4;
   color:#6e6e6e;
-  height:40px;
+  height:36px;
 }
 
 #logo {
+	display:inline-block;
   padding:0 10px;
-}
-
-#featured {
-  background:url(../images/grid.png) 10px 0;
 }
 
 .sidebar #content {
@@ -37,10 +34,10 @@ body {
   float:left;
 }
 
-
 #footer {
   background:#1f1f1f;
   color:#fff;
+  margin:0 auto;
   padding:10px 0;
 }
 
@@ -240,14 +237,16 @@ legend {
 }
 
 .tabs li, 
-.pager li {
+.item-list ul.pager li {
   float:left;
   margin:0 1px;
+  padding:0;
 }
 
 .tabs a,
-.pager a,
-.pager-current {
+ul.pager a,
+.item-list ul.pager .pager-current {
+	color:#3a3a3a;
   display:block;
   padding:0 5px;
 }
@@ -257,7 +256,7 @@ legend {
 }
 
 .pager a:hover,
-.pager-current {
+.item-list ul.pager .pager-current {
   background:#444;
   color:#fff;
 }
@@ -292,6 +291,11 @@ p.submitted {
 /**
  * Timemap
  */
+#mapcontainer {
+  height:378px;
+  width:100%;
+}
+
 #map {
   height:100%;  
   width:100%;
@@ -305,12 +309,7 @@ div#timeline {
 }
 
 #timelinecontainer {
-  height:150px;
-  width:100%;
-}
-
-#mapcontainer {
-  height:400px;
+  height:162px;
   width:100%;
 }
 
