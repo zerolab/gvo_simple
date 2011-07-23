@@ -16,6 +16,7 @@
       <h1 class='site-name'><?php print $site_name ?></h1>
     <?php endif; ?>
     </div>
+    <?php if ($search_box): ?><div class="search"><?php print $search_box ?></div><?php endif; ?>
     <?php if ($header) print $header ?>    
   </div>
   <div id="navigation">

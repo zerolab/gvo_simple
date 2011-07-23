@@ -147,6 +147,15 @@ function gvo_simple_username($object) {
 }
 
 /**
+ * Implementation of hook_preprocess_block()
+ */
+function gvo_simple_preprocess_block(&$vars) {
+	if ($vars['block']->region == 'header') {		
+		unset($vars['block']->subject);
+	}
+}
+
+/**
  * Returns the themed submitted-by string for the node.
  */
 function gvo_simple_node_submitted($node) {
