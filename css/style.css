@@ -88,10 +88,6 @@ h2 {
   margin:0 0 18px;
 }
 
-h2.block-title {
-  padding:0 0 20px;
-}
-
 h3 {
   font-size:18px;
   line-height:1;
@@ -343,17 +339,17 @@ ul.item-grid {
 /**
  * Archive Items page(s)
  */
-.page-items #content {
+.page-archive #content {
 	margin-right:0;
 	padding-right:20px;
   width:710px;
 }
 
-.page-items #side {
+.page-archive #side {
   width:230px;
 }
 
-.page-items .item-grid li {
+.page-archive .item-grid li {
   width:350px;
 }
 

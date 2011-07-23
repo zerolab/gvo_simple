@@ -64,6 +64,11 @@
   margin:0 0 18px;
 }
 
+.node-form .location #gmap-auto1map-gmap0 {
+  height:198px!important;
+  width:410px!important;
+}
+
 .node-form .vertical-tabs .form-text,
 .node-form .vertical-tabs .resizable-textarea {
   width:578px;
